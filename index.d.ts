@@ -8,16 +8,13 @@ declare module "react-draggable-tags" {
     isList?: boolean;
   }
 
-  export interface DraggableAreasGroupProps<T> {
-    addArea: (areaId: any) => DraggableArea;
-  }
-
   export class DraggableArea<T> extends React.Component<
     DraggableProps<T>,
     unknown
   > {}
-  export class DraggableAreasGroup<T> extends React.Component<
-    DraggableAreasGroupProps<T>,
-    unknown
-  > {}
+
+  export class DraggableAreasGroup extends DraggableTagsGroup {
+    isInAreas: any[];
+    addArea(areaId: any): any;
+  }
 }
